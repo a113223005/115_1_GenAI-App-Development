@@ -1,5 +1,6 @@
 import json
 import os
+from html import escape
 import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -111,14 +112,59 @@ if submit_btn:
             
             st.success("🎉 分析完成！")
             st.subheader("📊 結構化提取結果")
-            
+
+            st.markdown(
+                """
+                <style>
+                .result-card {
+                    min-height: 92px;
+                    padding-top: 2px;
+                }
+                .result-label {
+                    margin-bottom: 12px;
+                    color: #4f79d1;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+                .result-value {
+                    color: #111827;
+                    font-size: 42px;
+                    font-weight: 700;
+                    line-height: 1.15;
+                    white-space: normal;
+                    overflow-wrap: anywhere;
+                    word-break: normal;
+                }
+                </style>
+                """,
+                unsafe_allow_html=True,
+            )
+
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.metric("🎯 活動名稱", result_data.get("event_name", "未提及"))
+                st.markdown(
+                    '<div class="result-card"><div class="result-label">🎯 活動名稱</div>'
+                    '<div class="result-value">'
+                    + escape(str(result_data.get("event_name", "未提及")))
+                    + "</div></div>",
+                    unsafe_allow_html=True,
+                )
             with col2:
-                st.metric("⏰ 日期時間", result_data.get("event_date", "未提及"))
+                st.markdown(
+                    '<div class="result-card"><div class="result-label">⏰ 日期時間</div>'
+                    '<div class="result-value">'
+                    + escape(str(result_data.get("event_date", "未提及")))
+                    + "</div></div>",
+                    unsafe_allow_html=True,
+                )
             with col3:
-                st.metric("📍 活動地點", result_data.get("location", "未提及"))
+                st.markdown(
+                    '<div class="result-card"><div class="result-label">📍 活動地點</div>'
+                    '<div class="result-value">'
+                    + escape(str(result_data.get("location", "未提及")))
+                    + "</div></div>",
+                    unsafe_allow_html=True,
+                )
 
             with st.expander("🔍 檢視原始 JSON 輸出"):
                 st.json(result_data)
