@@ -81,10 +81,10 @@ Main file path：app.py
 完成 Cloud 部署後，將公開 App 網址填入此處：
 
 ```text
-Streamlit App URL：https://1151genai-app-development-h2xqkahybcgpzihd8wfadc.streamlit.app
+Streamlit App URL：https://1151genai-app-development-khfgtswshy6cjn39j38frn.streamlit.app
 ```
 
-目前是否可開啟及老師觀看權限仍須於繳交前確認。Cloud 的根目錄入口使用 `app.py`，不需在部署設定填寫含空格的子資料夾路徑。
+作者已確認新 App 網址可開啟，GitHub Repo 已設為 Public；請再確認老師可開啟 App。Cloud 的根目錄入口使用 `app.py`，不需在部署設定填寫含空格的子資料夾路徑。
 
 ## 六、操作與驗收
 
@@ -100,7 +100,7 @@ Streamlit App URL：https://1151genai-app-development-h2xqkahybcgpzihd8wfadc.str
 
 驗收紀錄請填寫[第 8 週個人專題設計與驗收紀錄](./第08週_課堂簡化版_專題設計與驗收紀錄.md)，應包含 Cloud 網址、部署分支、入口、驗收日期、實際模型、輸入原文、輸出 JSON、人工核對與請求數。
 
-目前已有空白輸入、超過 6000 字元、正常資料與資訊不足的操作截圖；另有一筆 Cloud `gpt-4o-mini` 成功結果紀錄，使用 1 次請求。截圖與輸入、模型、請求數等紀錄詳見驗收文件。待補項目包括 6001 字元邊界測試、錯誤後舊結果檢查，以及 Cloud 網址可用性和老師觀看權限確認。
+目前已有空白輸入、26495 字元超長輸入、正常資料與資訊不足的操作截圖；空白及超長資料在程式呼叫 API 前即被攔截，各為 0 次請求。另有一筆 Cloud `gpt-4o-mini` 成功結果，使用 1 次請求。截圖與詳細紀錄見[驗收文件](./第08週_課堂簡化版_專題設計與驗收紀錄.md)。待補項目包括 6001 字元邊界測試、錯誤後舊結果檢查，以及確認老師可開啟 App。
 
 ## 七、套件相依
 
