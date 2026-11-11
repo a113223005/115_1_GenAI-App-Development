@@ -81,8 +81,10 @@ Main file path：app.py
 完成 Cloud 部署後，將公開 App 網址填入此處：
 
 ```text
-Streamlit App URL：待填
+Streamlit App URL：https://1151genai-app-development-h2xqkahybcgpzihd8wfadc.streamlit.app
 ```
+
+目前是否可開啟及老師觀看權限仍須於繳交前確認。Cloud 的根目錄入口使用 `app.py`，不需在部署設定填寫含空格的子資料夾路徑。
 
 ## 六、操作與驗收
 
@@ -97,6 +99,8 @@ Streamlit App URL：待填
 | Cloud 真實 API | 至少完成一筆雲端真實 API 成功紀錄 |
 
 驗收紀錄請填寫[第 8 週個人專題設計與驗收紀錄](./第08週_課堂簡化版_專題設計與驗收紀錄.md)，應包含 Cloud 網址、部署分支、入口、驗收日期、實際模型、輸入原文、輸出 JSON、人工核對與請求數。
+
+目前已有空白輸入、超過 6000 字元、正常資料與資訊不足的操作截圖；另有一筆 Cloud `gpt-4o-mini` 成功結果紀錄，使用 1 次請求。截圖與輸入、模型、請求數等紀錄詳見驗收文件。待補項目包括 6001 字元邊界測試、錯誤後舊結果檢查，以及 Cloud 網址可用性和老師觀看權限確認。
 
 ## 七、套件相依
 
